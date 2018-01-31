@@ -30107,14 +30107,14 @@ define('build', function (require) {
                                                     '});\n' +
                                                     '}(this));\n';
                                 } else {
-                                    singleContents += '\n' + namespaceWithDot + 'define("' + moduleName + '", ' +
+                                    singleContents += '\n' /*+ namespaceWithDot + 'define("' + moduleName + '", ' +
                                                      (shimDeps && shimDeps.length ?
                                                             build.makeJsArrayString(shimDeps) + ', ' : '') +
                                                      (shim.exportsFn ? shim.exportsFn() : 'function(){}') +
-                                                     ');\n';
+                                                     ');\n';*/
                                 }
                             } else {
-                                singleContents += '\n' + namespaceWithDot + 'define("' + moduleName + '", function(){});\n';
+                                singleContents += '\n' //+ namespaceWithDot + 'define("' + moduleName + '", function(){});\n';
                             }
                         }
 
